@@ -1,0 +1,12 @@
+<h1>Camper Show Page</h1>
+
+<ul>
+<li>The Camper's Name: <%= @camper.name %></li>
+<li>The Camper's Age: <%= @camper.age %></li>
+<li>Their List of Activities:</li>
+<ul>
+<% @camper.signups.each do |signup| %>
+    <li> <%=signup.activity.name%> || time: <%=signup.time%> </li>
+<% end %>
+</ul>
+</ul>
